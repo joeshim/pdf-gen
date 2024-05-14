@@ -207,4 +207,11 @@ async function modifyPdf(text1, text2, text, newText, addressNumber, addressInfo
     return pdfBytes;
 }
 
-app.listen(3000, () => console.log('Server running on port 3000'));
+// ローカルテストの場合　app.listen(3000, () => console.log('Server running on port 3000'));
+
+//Herokuが割り当てるポート番号
+const PORT = process.env.PORT || 3000; // Herokuが提供するPORT変数、またはローカルで3000番ポートを使用
+
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
