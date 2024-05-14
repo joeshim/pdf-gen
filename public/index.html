@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Business Card Text Input</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 500px; /* 画像サイズは必要に応じて調整してください */
+        }
+        form {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin-top: 20px;
+            width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        label {
+            margin-top: 10px;
+            display: block;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: calc(100% - 22px); /* inputフィールドの幅を調整 */
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 20px 2px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>名刺テキスト入力フォーム</h1>
+    <img src="img/sample.jpg" alt="サンプル画像">
+    <form id="pdfForm">
+        <label for="text1">タイトル1:</label>
+        <input type="text" id="text1" name="text1" value="管理本部"><br>
+        <label for="text2">タイトル2:</label>
+        <input type="text" id="text2" name="text2" value="人事総務グループ"><br>
+        <label for="text">氏名:</label>
+        <input type="text" id="text" name="text" value="上谷 恵里奈"><br>
+        <label for="newText">英語名:</label>
+        <input type="text" id="newText" name="newText" value="Erina Joutani"><br>
+        <label for="addressNumber">住所1（郵便番号 or 拠点名）:</label>
+        <input type="text" id="addressNumber" name="addressNumber" value="〒106-0032"><br>
+        <label for="addressInfo">住所2:</label>
+        <input type="text" id="addressInfo" name="addressInfo" value="東京都港区六本木1丁目4-5 アークヒルズサウスタワー7階"><br>
+        <label for="mobile">モバイル:</label>
+        <input type="text" id="mobile" name="mobile" value="070-1211-6444"><br>
+        <label for="email">メール:</label>
+        <input type="text" id="email" name="email" value="erina.joutani@dgloss.co.jp"><br>
+        <label for="tel">TEL:</label>
+        <input type="text" id="tel" name="tel" value="03-6869-8063"><br>
+        <label for="fax">FAX:</label>
+        <input type="text" id="fax" name="fax" value="03-6869-8064"><br>
+        <button type="button" onclick="submitForm()">PDF生成</button>
+    </form>
+
+    <script src="app.js"></script>
+</body>
+</html>
